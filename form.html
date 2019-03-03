@@ -1,0 +1,56 @@
+<form id = "formMail" action = ""  method = "post" enctype = "multipart/form-data">
+	<div class = "row">
+		<div class = "col-sm-12 col-md-6 columnOrder noPading">
+			<div class = "col-6 columnOrder">
+				<label for = "name">
+					Imię i Nazwisko:
+				</label><br/>
+				<label for = "email">
+					Adres e-mail:
+				</label><br/>
+				<label for = "phone">
+					Telefon:
+				</label><br/>
+				<label>
+					Wybierz:
+				</label>
+			</div>
+			
+			<div class = "col-6 columnOrder">
+				<input type = "text" class ="inputOrder" id = "nameID" required name = "nameOrder" autocomplete='name' data-error = "Wypełnij to pole" pattern = "[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ ]+">
+				<input type = "email" class ="inputOrder"id = "emailID" required name = "email" autocomplete='email' data-error = "Wpisz poprawny email" pattern = "[^@\s]+@[^@\s]+\.[^@\s]+">
+				<input type = "phone" class ="inputOrder" id = "phoneID" required name = "phone" autocomplete='phone' data-error = "Wpisz poprawny numer telefonu" pattern = "([1-9]{1}[\d]{8})|([\+]{1}[1-9]{1}[\d]{10})">
+				<select id = "orderID" class ="inputOrder">
+					<option value = "Instant Lift Serum">Instant Lift Serum (440 zł)</option>
+					<option value = "Cleansing Lotion">Cleansing Lotion (300 zł)</option>
+					<option value = "Smoothing Serum ">Smoothing Serum (790 zł)</option>
+					<option value = "CAVIARON Box">CAVIARON Box (1320 zł)</option>
+				</select>
+			</div>	
+		</div>
+
+		<div class = "col-sm-12 col-md-6 columnOrder">
+			<label>
+				Wiadomość:
+			</label>
+			<textarea id "textSendID" required rows="4" cols="50"></textarea>
+			<br/>
+		</div>
+	</div>
+		
+	<div class = "row">
+		<div class = "col-sm-12 col-md-6 columnOrder acceptDate">
+				<input type = "checkbox" data-error = "Musisz wypełnić pole" name = "regulation">
+				<i class = "state" aria-hidden = "true"></i>
+				Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z przepisami ustawy z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (t. j. Dz. U. 101 z 2002 r. poz. 926 ze zm.).
+		</div>
+	</div>
+	
+	<div class = "row">
+		<div class = "col-12 columOrder">
+				<span class = "btn btn-secondary" onclick = "hiddenForm()">Cofnij</span>
+				<input type = "submit" class = "btn btn-secondary" value = "Zamawiam">
+		</div>	
+	</div>	
+	
+</form>
